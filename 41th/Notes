@@ -1,0 +1,1 @@
+在Person调用含有对象的方法，使用了person的对象，Person.changeDay
