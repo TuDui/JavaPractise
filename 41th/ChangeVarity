@@ -1,0 +1,36 @@
+public class Person{
+	public static void main(String[] args) {
+		Person a = new Person();
+		Birth d = new Birth(1996,2,11);
+		Birth c = new Birth(1996,3,21);
+		a.changeDay(d);   //此处必须需要使用person对象来调用changeDay方法
+		d.displayBirth();		
+	}
+	
+	void changeDay(Birth a) {
+		a.change(21);    //重点理解此处的内存，d对象的Day被改变为21
+	}
+	
+}
+
+class Birth{
+	int year;
+	int month;
+	int day;
+	
+	Birth(int y, int m, int d){
+		year = y;
+		month = m;
+		day = d;
+	}
+	
+	public void displayBirth(){
+		System.out.println("year"+year+"month"+month+"day"+day);
+	}
+	
+	public void change(int i) {
+		day = i;
+	}
+}
+
+ 
