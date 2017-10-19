@@ -1,0 +1,43 @@
+/*
+Q:
+定义一个点类，用于表示三维空间的点。
+1、可以生成具有特定坐标的点对象。
+2、提供可以设置三个坐标的方法。
+3、提供可以计算该“点”距原点的距离的方法。
+*/
+
+import java.lang.Math;
+public class Point {
+	public static void main(String[] args) {
+		PointPra p = new PointPra(1,0,1);
+		p.distance(p);
+		p.pointSet(0, 0, 2);
+		p.distance(p);
+	}
+
+}
+
+class PointPra{
+	double x;
+	double y;
+	double z;
+	
+	PointPra(double m, double n,double q){
+		x = m;
+		y = n;
+		z = q;
+	}
+	
+	void pointSet(double m,double n,double q) {
+		x = m;
+		y = n;
+		z = q;
+	}
+	
+	void distance(PointPra a) {
+		double d;
+		d = Math.sqrt((a.x)*(a.x)+(a.y)*(a.y)+(a.z)*(a.z));
+		System.out.println(d);
+	}
+	
+}
