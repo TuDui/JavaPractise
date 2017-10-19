@@ -1,1 +1,2 @@
 在Person调用含有对象的方法，使用了person的对象，Person.changeDay
+static 关键字可以使得一个方法为一个类中使用，否则的话，需要创建类的对象，来调用这个方法
