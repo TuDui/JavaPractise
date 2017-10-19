@@ -1,0 +1,13 @@
+使用类.成员变量，访问的成员变量必须是静态的。
+如果需要访问不是静态的成员变量，必须new出一个新的对象。
+
+public class Point {
+	static int i = 0;
+	int n = 1;
+	
+	public static void main(String[] args) {
+		Point a = new Point();
+		System.out.println(a.n);
+		System.out.println(Point.i);
+	}
+}
