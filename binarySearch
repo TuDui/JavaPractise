@@ -1,0 +1,21 @@
+public static int binarySearch(int[] a,int num) {
+		int index = 0;
+		int st = 0;
+		int end = a.length-1;
+		index = (st+end)/2;
+		while(st<=end) {
+			if(a[index] == num)
+				return index;
+			if(a[index] < num) {
+				st = index;
+			}
+			if(a[index] > num) {
+				end = index;
+			}
+			
+			index = (st + end)/2;
+		}
+		return -1;
+	}
+  
+  如果采用这种方法，难以搜索出两端的数值，进入死循环。
