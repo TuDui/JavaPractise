@@ -1,0 +1,152 @@
+import java.util.*;
+public class Test {
+	public static void main(String[] args) {
+		System.out.println("1th example");
+		int x = 1;
+		int y = 2;
+		int z = 3;
+		int a1 = x + y - 2/2 + z;//1+2-1+3=5
+		int a2 = x + (y-2)/(2+z);//1+0=1
+		System.out.println(a1);
+		System.out.println(a2);
+		System.out.println();
+		
+		System.out.println("2th example");
+		ternary();
+		alternative();
+		
+		System.out.println("3th example");
+		test(2,1,3);
+		test(2,3,2);
+		test(3,2,1);
+		
+		System.out.println("4th example");
+		print100(100);
+		
+		System.out.println("5th example");
+		break47();
+		turn47();
+		
+		System.out.println("6th example");
+		String a = "Hello";
+		String b = "Hello";
+		String c = "Hi";
+		System.out.println(compare1(a,b));
+		System.out.println(compare2(a,b));
+		System.out.println(compare1(a,c));
+		String m = new String("Hello");
+		String n = new String("Hello");
+		System.out.println(compare1(m,n));
+		System.out.println(compare2(m,n));
+		
+		System.out.println("7th example");
+		int[] arr = new int[25];
+		for(int i=0;i<25;i++) {
+			Random m1 = new Random();
+			arr[i] = m1.nextInt();
+			System.out.println(arr[i]);
+		}
+		for(int i =0;i<24;i++) {
+			comrand(arr[i], arr[i+1]);
+		}
+		
+		System.out.println("8th example");
+		System.out.println("pass");
+		
+		System.out.println("9th example");
+		for(int i=1;i<100;i++) {
+			for(int j = 2;j<i;j++) {
+				if(i%j == 0)
+				{
+					//System.out.println("ERROR");
+					break;
+				}
+				if(j == i-1)
+					System.out.println(i);
+					
+			}
+			
+		}
+		
+		System.out.println("10th example");
+		for(int i = 0;i<3;i++) {
+			switch(i) {
+			case 0:System.out.println("zero");
+			case 1:System.out.println("one");
+			case 2:System.out.println("two");
+			}
+		}
+		
+		
+		
+	}
+	
+	public static void test(int testval,int begin,int end) {
+		if(begin > end) {
+			int temp = begin;
+			begin = end;
+			end = temp;
+		}
+		if((begin <= testval)&(testval<=end))
+			System.out.println("YES");
+		else
+			System.out.println("NO");
+	}
+	
+	public static void ternary() {
+		System.out.println("ternary method");
+	}
+	
+	public static void alternative() {
+		System.out.println("alternative method");
+	}
+	
+	public static void print100(int i) {
+		for(int j=1;j<=i;j++)
+			System.out.println(j);
+	}
+	
+	public static void break47() {
+		for(int i=1;i<=100;i++) {
+			if(i == 47)
+				break;
+		System.out.println(i);
+		}
+		
+	}
+	
+	public static int turn47() {
+		for(int i=1;i<=100;i++) {
+			if(i == 47)
+				return -1;
+		System.out.println(i);
+		}
+		return -1;
+	}
+	
+	public static String compare1(String a,String b) {
+		if(a == b) {
+			return "Equal";
+		}
+		else
+			return "Not Equal";
+	}
+	
+	public static String compare2(String a,String b) {
+		if(a.equals(b))
+			return "Equal";
+		else
+			return "Not Equal";
+	}
+	
+	public static void comrand(int x,int y) {
+		if(x > y)
+			System.out.println("greater than next");
+		else if(x < y)
+			System.out.println("smaller than next");
+		else
+			System.out.println("Equal");
+	}
+}
+
+
